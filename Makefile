@@ -13,5 +13,5 @@ clean:
 	rm -f pod.dsk pod.bin *~ *.lst *.map *.tar.gz
 
 srctar:
-	tar -czf pod_src.tar.gz AUTOEXEC.BAS Makefile pod.asm README.md \ 
+	tar -czf pod_src.tar.gz AUTOEXEC.BAS Makefile pod.asm README.md \
 	transcode LICENSE
