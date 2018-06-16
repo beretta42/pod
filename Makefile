@@ -10,4 +10,8 @@ pod.bin: pod.asm
 	lwasm -lpod.lst -mpod.map -b -opod.bin pod.asm
 
 clean:
-	rm -f pod.dsk pod.bin
+	rm -f pod.dsk pod.bin *~ *.lst *.map *.tar.gz
+
+srctar:
+	tar -czf pod_src.tar.gz AUTOEXEC.BAS Makefile pod.asm README.md \ 
+	transcode LICENSE
