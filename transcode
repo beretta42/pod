@@ -1,0 +1,7 @@
+cp coco17.pbm coco$1.pbm
+gimp coco$1.pbm 
+dd if=coco$1.pbm of=coco$1.1 bs=256 conv=sync
+mpg123 -w coco$1.wav coco$1.mp3 
+sox coco$1.wav -b8 -c1 -r15720 -eunsigned coco$1.raw
+cat coco$1.1 coco$1.raw | dd of=coco$1.pdc bs=256 conv=sync
+rm -f coco$1.wav coco$1.1 coco$1.raw
